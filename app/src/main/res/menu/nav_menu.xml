@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_home"
+        android:icon="@drawable/baseline_home_24"
+        android:title="Inicio" />
+    <item
+        android:id="@+id/nav_clientes"
+        android:icon="@drawable/baseline_person_24"
+        android:title="Clientes" />
+    <item
+        android:id="@+id/nav_rutinas"
+        android:icon="@drawable/baseline_rule_24"
+        android:title="Rutinas" />
+    <item
+        android:id="@+id/nav_ejercicios"
+        android:icon="@drawable/baseline_fitness_center_24"
+        android:title="Ejercicios" />
+    <item
+        android:id="@+id/nav_categoria_ejercicio"
+        android:icon="@drawable/baseline_category_24"
+        android:title="Categorias" />
+</menu>

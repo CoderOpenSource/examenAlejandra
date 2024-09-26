@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp">
+
+    <!-- Description of the routine -->
+    <TextView
+        android:id="@+id/tv_descripcion_rutina"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Descripción de la rutina"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btn_pdf"
+        android:layout_marginEnd="16dp" />
+
+    <!-- Start date of the routine -->
+    <TextView
+        android:id="@+id/tv_fecha_inicio_rutina"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Fecha de inicio"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_descripcion_rutina"
+        app:layout_constraintEnd_toStartOf="@+id/btn_pdf"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="16dp" />
+
+    <!-- End date of the routine -->
+    <TextView
+        android:id="@+id/tv_fecha_final_rutina"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Fecha final"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_fecha_inicio_rutina"
+        app:layout_constraintEnd_toStartOf="@+id/btn_pdf"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="16dp" />
+
+    <!-- Button to generate PDF -->
+    <ImageButton
+        android:id="@+id/btn_pdf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/baseline_present_to_all_24"
+        android:contentDescription="Generar PDF"
+        app:layout_constraintEnd_toStartOf="@id/btn_delete"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:layout_marginEnd="8dp" />
+
+    <!-- Delete button -->
+    <ImageButton
+        android:id="@+id/btn_delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/baseline_delete_24"
+        android:contentDescription="Eliminar rutina"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="?attr/selectableItemBackgroundBorderless" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,91 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Toolbar -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:title="Crear Rutina"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+    <!-- Botón para seleccionar la fecha de inicio -->
+    <Button
+        android:id="@+id/btn_fecha_inicio"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Seleccionar Fecha de Inicio"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginHorizontal="16dp" />
+
+    <!-- Botón para seleccionar la fecha de finalización -->
+    <Button
+        android:id="@+id/btn_fecha_final"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Seleccionar Fecha de Finalización"
+        app:layout_constraintTop_toBottomOf="@id/btn_fecha_inicio"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="8dp" />
+
+    <!-- Campo de texto para la descripción de la rutina -->
+    <EditText
+        android:id="@+id/edt_descripcion"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Descripción de la rutina"
+        android:inputType="textMultiLine"
+        app:layout_constraintTop_toBottomOf="@id/btn_fecha_final"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="8dp" />
+
+    <!-- Spinner para seleccionar el cliente -->
+    <Spinner
+        android:id="@+id/spinner_clientes"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/edt_descripcion"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Botón para ver ejercicios, inicialmente oculto (visibility: gone) -->
+    <Button
+        android:id="@+id/btn_ver_ejercicios"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Ver Ejercicios"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/btn_guardar_rutina"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="16dp" />
+
+    <!-- Botón para guardar la rutina -->
+    <Button
+        android:id="@+id/btn_guardar_rutina"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Guardar Rutina"
+        app:layout_constraintTop_toBottomOf="@id/spinner_clientes"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="20dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

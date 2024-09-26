@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".rutina.presentation.UpdateCategoriaActivity">>
+
+    <!-- Toolbar -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:title="Actualizar Categoría"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+    <!-- Campo de texto para el nombre de la categoría -->
+    <EditText
+        android:id="@+id/edt_nombre_categoria"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Nombre de la categoría"
+        android:inputType="text"
+        android:enabled="false"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginHorizontal="16dp" />
+
+    <!-- Campo de texto para la descripción de la categoría -->
+    <EditText
+        android:id="@+id/edt_descripcion_categoria"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Descripción de la categoría"
+        android:inputType="text"
+        android:enabled="false"
+        app:layout_constraintTop_toBottomOf="@id/edt_nombre_categoria"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="8dp" />
+
+    <!-- Botón para editar -->
+    <ImageView
+        android:id="@+id/btn_edit_categoria"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/baseline_edit_24"
+        android:contentDescription="Editar categoría"
+        app:layout_constraintTop_toBottomOf="@id/edt_descripcion_categoria"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp" />
+
+    <!-- Botón para guardar -->
+    <ImageView
+        android:id="@+id/btn_save_categoria"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/baseline_save_24"
+        android:contentDescription="Guardar cambios"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/edt_descripcion_categoria"
+        app:layout_constraintStart_toEndOf="@id/btn_edit_categoria"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
